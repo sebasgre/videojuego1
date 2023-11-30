@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.nave {
+    width: 80px;
+    height: 80px;
+    background-image: url('../img/nave.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 50px;
+    left: calc(50vw - 40px);
+}
+
+body {
+    background-image: url('../img/espacio.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 1fr;
+    
+}
+
+.bala {
+    width: 10px;
+    height: 50px;
+    background-color: rgb(234, 243, 150);
+    border-radius: 15px;
+    box-shadow: 0px 0px 40px 10px rgb(0, 255, 255);
+    position: absolute;
+}
+
+.enemigo {
+    width: 80px;
+    height: 50px;
+    background-image: url('../img/roca.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+}
+
+#lives {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 2em;
+    color: rgb(234, 243, 150);
+}
+
+i {
+    color: #ff0000eb;
+}
+
+#times {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2em;
+    color: lightcoral;
+}
+
+.score {
+    position: absolute;
+    top: 10px;
+    left: 300px;
+    font-size: 2em;
+    color: rgb(234, 243, 150);
+}
+i {
+    color: #ff0000eb;
+}
+
+.high-score {
+    position: absolute;
+    top: 10px;
+    left: 700px;
+    font-size: 2em;
+    color: rgb(234, 243, 150);
+}
+
+button {
+    border-radius: .6rem;
+    cursor: pointer;
+    padding: .4rem;
+    background-color: rgba(17, 20, 248, 0.4);
+    margin-left: 5rem;
+    margin-bottom: -34rem;
+}
+
+.control {
+    align-items: center;
+    text-align: center;
+    display: none;
+    gap: 1rem;
+    flex-direction: row;
+    margin: .5rem;
+    
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        background-image: url('../img/espacio.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-area: 1fr;
+    }
+    #lives {
+        font-size: 1rem;
+    }
+    #times {
+        
+        font-size: 1rem;
+    }
+    .control {
+        display: flex;
+        gap: 5px;
+        margin-left: -5rem;
+        margin-bottom: 1rem;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .control i {
+        padding: 4px 40px;
+        font-size: 1rem;
+        gap: 80px;
+    }
+    .score {
+        margin-left: -220px;
+        font-size: 1rem;
+    }
+    .high-score {
+        position: none;
+        margin-left: -550px;
+        font-size: 1rem;
+    }
+    
+}
+@media screen and (max-width: 300px) {
+
+    #lives {
+        font-size: .7rem;
+    }
+    #times {
+        margin-left: 100px;
+        font-size: .9rem;
+    }
+    .control {
+        display: flex;
+        margin-bottom: 7rem;
+        margin-left: -4.6rem;
+        gap: 1px;
+        align-items: center;
+        justify-content: center;
+    }
+    .control i {
+        padding: 4px 5px;
+        font-size: .7rem;
+        
+    }
+    .score {
+        margin-left: -220px;
+        font-size: .7rem;
+    }
+    .high-score {
+        position: none;
+        margin-left: -550px;
+        font-size: .7rem;
+    }
+}
